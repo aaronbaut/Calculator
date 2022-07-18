@@ -28,3 +28,18 @@ const addButton = document.createElement('button');
 addButton.classList.add('addition');
 addButton.innerText = '+'
 container.appendChild(addButton);
+
+const subButton = document.createElement('button');
+subButton.classList.add('subtraction')
+subButton.innerText = '-';
+container.appendChild(subButton);
+
+const multButton = document.createElement('button')
+multButton.classList.add('multiplication')
+multButton.innerText = 'x';
+container.appendChild(multButton);
+
+const divButton = document.createElement('button');
+divButton.classList.add('division')
+divButton.innerText = '/'
+container.appendChild(divButton);
