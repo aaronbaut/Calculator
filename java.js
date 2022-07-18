@@ -23,3 +23,8 @@ let operator = function(a,b,op) {
     }
 };
 
+const container = document.querySelector('#container');
+const addButton = document.createElement('button');
+addButton.classList.add('addition');
+addButton.innerText = '+'
+container.appendChild(addButton);
