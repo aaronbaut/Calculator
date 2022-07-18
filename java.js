@@ -1,24 +1,25 @@
-const add = function(x,y) {
-    return x+y;
+const add = function(a,b) {
+    return a+b;
 }
-const subtract = function(x,y) {
-    return x-y;
+const subtract = function(a,b) {
+    return a-b;
 }
-const multiply = function(x,y) {
-    return x*y;
+const multiply = function(a,b) {
+    return a*b;
 }
-const divide = function(x,y) {
-    return x/y;
+const divide = function(a,b) {
+    return a/b;
 }
 
-let operator = function(x,y,op) {
+let operator = function(a,b,op) {
     if(op==`+`) {
-        return add(x,y)
+        return add(a,b)
     } else if(op==`-`) {
-        return subtract(x,y)
+        return subtract(a,b)
     } else if (op==`x`){
-        return multiply(x,y)
+        return multiply(a,b)
     } else if (op==`/`) {
-        return divide(x,y)
+        return divide(a,b)
     }
 };
+
