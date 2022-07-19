@@ -22,24 +22,23 @@ let operator = function(a,b,op) {
         return divide(a,b)
     }
 };
-
-const container = document.querySelector('#container');
+const signs = document.querySelector('.signs');
 const addButton = document.createElement('button');
 addButton.classList.add('addition');
 addButton.innerText = '+'
-container.appendChild(addButton);
+signs.appendChild(addButton);
 
 const subButton = document.createElement('button');
 subButton.classList.add('subtraction')
 subButton.innerText = '-';
-container.appendChild(subButton);
+signs.appendChild(subButton);
 
 const multButton = document.createElement('button')
 multButton.classList.add('multiplication')
 multButton.innerText = 'x';
-container.appendChild(multButton);
+signs.appendChild(multButton);
 
 const divButton = document.createElement('button');
 divButton.classList.add('division')
 divButton.innerText = '/'
-container.appendChild(divButton);
+signs.appendChild(divButton);
