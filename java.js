@@ -42,3 +42,19 @@ const divButton = document.createElement('button');
 divButton.classList.add('division')
 divButton.innerText = '/'
 signs.appendChild(divButton);
+
+const content = document.querySelector('.content')
+const oneButton = document.createElement('button')
+oneButton.classList.add('one')
+oneButton.innerText = '1'
+content.appendChild(oneButton)
+
+const twoButton = document.createElement('button')
+twoButton.classList.add('two')
+twoButton.innerText = '2'
+content.appendChild(twoButton)
+
+const threeButton = document.createElement('button')
+threeButton.classList.add('three')
+threeButton.innerText = '3'
+content.appendChild(threeButton);
