@@ -43,6 +43,11 @@ divButton.classList.add('division')
 divButton.innerText = '/'
 signs.appendChild(divButton);
 
+const equalButton = document.createElement('button')
+equalButton.classList.add('equal')
+equalButton.innerText = '='
+signs.appendChild(equalButton);
+
 const content = document.querySelector('.content')
 const oneButton = document.createElement('button')
 oneButton.classList.add('one')
