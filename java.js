@@ -98,3 +98,14 @@ const zeroButton = document.createElement('button')
 zeroButton.classList.add('zero')
 zeroButton.innerText = '0'
 content.appendChild(zeroButton);
+
+const input = document.querySelector('.input')
+const inputField = document.createElement('div')
+inputField.classList.add('inputField')
+inputField.innerText = 'testestesttesetseestesest'
+input.appendChild(inputField);
+
+const clearButton = document.createElement('button')
+clearButton.classList.add('clear')
+clearButton.innerText = 'clear'
+input.appendChild(clearButton);
