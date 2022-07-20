@@ -58,3 +58,38 @@ const threeButton = document.createElement('button')
 threeButton.classList.add('three')
 threeButton.innerText = '3'
 content.appendChild(threeButton);
+
+const fourButton = document.createElement('button')
+fourButton.classList.add('four')
+fourButton.innerText = '4'
+content.appendChild(fourButton);
+
+const fiveButton = document.createElement('button')
+fiveButton.classList.add('five')
+fiveButton.innerText = '5'
+content.appendChild(fiveButton);
+
+const sixButton = document.createElement('button')
+sixButton.classList.add('six')
+sixButton.innerText = '6'
+content.appendChild(sixButton);
+
+const sevenButton = document.createElement('button')
+sevenButton.classList.add('seven')
+sevenButton.innerText = '7'
+content.appendChild(sevenButton);
+
+const eightButton = document.createElement('button')
+eightButton.classList.add('eight')
+eightButton.innerText = '8'
+content.appendChild(eightButton);
+
+const nineButton = document.createElement('button')
+nineButton.classList.add('nine')
+nineButton.innerText = '9'
+content.appendChild(nineButton);
+
+const zeroButton = document.createElement('button')
+zeroButton.classList.add('zero')
+zeroButton.innerText = '0'
+content.appendChild(zeroButton);
