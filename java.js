@@ -109,3 +109,12 @@ const clearButton = document.createElement('button')
 clearButton.classList.add('clear')
 clearButton.innerText = 'clear'
 input.appendChild(clearButton);
+
+const buttons = document.querySelectorAll('button')
+
+buttons.forEach((button) =>{
+    button.addEventListener('click', function(e) {
+        console.log(e.target.innerText)
+    return input.innerText = `${e.target.innerText}`
+    });
+});
