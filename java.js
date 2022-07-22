@@ -113,22 +113,25 @@ input.appendChild(clearButton);
 const numbers = document.querySelectorAll('.number')
 let arr = [];
 let i = 0;
-arr[i] = '';
+arr[0] = '';
 numbers.forEach((number) =>{
     number.addEventListener('click', function(e) {
         console.log(e.target.innerText)
+        console.log(i);
          arr[i] += `${e.target.innerText}`
         return input.innerText = arr[i]; 
     });
 });
 
+let arr2 = [];
 const symbols = document.querySelectorAll('.operator')
 symbols.forEach((symbol) => {
     symbol.addEventListener('click', (e) =>{
         console.log(`${e.target.innerText}`)
         i++;
-        arr[i] = `${e.target.innerText}`
-        return input.innerText = arr[i++];
+        arr2[i] = `${e.target.innerText}`
+        arr[i] = ''
+        return input.innerText = arr2[i];
     });
 });
 
