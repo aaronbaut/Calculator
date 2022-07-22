@@ -112,29 +112,28 @@ input.appendChild(clearButton);
 
 const numbers = document.querySelectorAll('.number')
 let arr = [];
-let a = '';
+let i = 0;
+arr[i] = '';
 numbers.forEach((number) =>{
     number.addEventListener('click', function(e) {
         console.log(e.target.innerText)
-         a += `${e.target.innerText}`
-         arr.push(`${a}`)
-        return input.innerText = a; 
+         arr[i] += `${e.target.innerText}`
+        return input.innerText = arr[i]; 
     });
 });
 
-let op = '';
 const symbols = document.querySelectorAll('.operator')
 symbols.forEach((symbol) => {
     symbol.addEventListener('click', (e) =>{
-        console.log(`This selected ${e.target.innerText}`)
-        arr.push(`${e.target.innerText}`)
-        op = `${e.target.innerText}`
-        return input.innerText = op;
+        console.log(`${e.target.innerText}`)
+        i++;
+        arr[i] = `${e.target.innerText}`
+        return input.innerText = arr[i++];
     });
 });
 
 const equal = document.querySelector('.equal');
 equal.addEventListener('click', (e) => {
-    console.log(`${e.target.innerText}`)    
-    
+    i++;
+    console.log(`${e.target.innerText}`)        
 })
