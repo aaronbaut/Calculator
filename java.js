@@ -24,22 +24,22 @@ let operator = function(a,b,op) {
 };
 const signs = document.querySelector('.signs');
 const addButton = document.createElement('button');
-addButton.classList.add('addition');
+addButton.classList.add('operator');
 addButton.innerText = '+'
 signs.appendChild(addButton);
 
 const subButton = document.createElement('button');
-subButton.classList.add('subtraction')
+subButton.classList.add('operator')
 subButton.innerText = '-';
 signs.appendChild(subButton);
 
 const multButton = document.createElement('button')
-multButton.classList.add('multiplication')
+multButton.classList.add('operator')
 multButton.innerText = 'x';
 signs.appendChild(multButton);
 
 const divButton = document.createElement('button');
-divButton.classList.add('division')
+divButton.classList.add('operator')
 divButton.innerText = '/'
 signs.appendChild(divButton);
 
