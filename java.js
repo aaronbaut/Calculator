@@ -50,52 +50,52 @@ signs.appendChild(equalButton);
 
 const content = document.querySelector('.content')
 const oneButton = document.createElement('button')
-oneButton.classList.add('one')
+oneButton.classList.add('number')
 oneButton.innerText = '1'
 content.appendChild(oneButton)
 
 const twoButton = document.createElement('button')
-twoButton.classList.add('two')
+twoButton.classList.add('number')
 twoButton.innerText = '2'
 content.appendChild(twoButton)
 
 const threeButton = document.createElement('button')
-threeButton.classList.add('three')
+threeButton.classList.add('number')
 threeButton.innerText = '3'
 content.appendChild(threeButton);
 
 const fourButton = document.createElement('button')
-fourButton.classList.add('four')
+fourButton.classList.add('number')
 fourButton.innerText = '4'
 content.appendChild(fourButton);
 
 const fiveButton = document.createElement('button')
-fiveButton.classList.add('five')
+fiveButton.classList.add('number')
 fiveButton.innerText = '5'
 content.appendChild(fiveButton);
 
 const sixButton = document.createElement('button')
-sixButton.classList.add('six')
+sixButton.classList.add('number')
 sixButton.innerText = '6'
 content.appendChild(sixButton);
 
 const sevenButton = document.createElement('button')
-sevenButton.classList.add('seven')
+sevenButton.classList.add('number')
 sevenButton.innerText = '7'
 content.appendChild(sevenButton);
 
 const eightButton = document.createElement('button')
-eightButton.classList.add('eight')
+eightButton.classList.add('number')
 eightButton.innerText = '8'
 content.appendChild(eightButton);
 
 const nineButton = document.createElement('button')
-nineButton.classList.add('nine')
+nineButton.classList.add('number')
 nineButton.innerText = '9'
 content.appendChild(nineButton);
 
 const zeroButton = document.createElement('button')
-zeroButton.classList.add('zero')
+zeroButton.classList.add('number')
 zeroButton.innerText = '0'
 content.appendChild(zeroButton);
 
@@ -115,6 +115,7 @@ const buttons = document.querySelectorAll('button')
 buttons.forEach((button) =>{
     button.addEventListener('click', function(e) {
         console.log(e.target.innerText)
-    return input.innerText = `${e.target.innerText}`
+        let foo = `${e.target.innerText}`
+    return input.innerText = foo; 
     });
 });
