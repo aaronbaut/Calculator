@@ -117,26 +117,27 @@ arr[0] = '';
 numbers.forEach((number) =>{
     number.addEventListener('click', function(e) {
         console.log(e.target.innerText)
-        console.log(i);
          arr[i] += `${e.target.innerText}`
         return input.innerText = arr[i]; 
     });
 });
 
 let arr2 = [];
+let x = 0;
 const symbols = document.querySelectorAll('.operator')
 symbols.forEach((symbol) => {
     symbol.addEventListener('click', (e) =>{
         console.log(`${e.target.innerText}`)
         i++;
-        arr2[i] = `${e.target.innerText}`
+        arr2[x] = `${e.target.innerText}`
         arr[i] = ''
-        return input.innerText = arr2[i];
+        return input.innerText = arr2[x];
     });
 });
 
 const equal = document.querySelector('.equal');
 equal.addEventListener('click', (e) => {
     i++;
-    console.log(`${e.target.innerText}`)        
+    console.log(`${e.target.innerText}`)   
+    return input.innerText = operator(arr[i-2],arr[i-1],arr2[x])     
 })
