@@ -117,7 +117,18 @@ numbers.forEach((number) =>{
     number.addEventListener('click', function(e) {
         console.log(e.target.innerText)
          a += `${e.target.innerText}`
-    return input.innerText = a; 
+         arr.push(`${a}`)
+        return input.innerText = a; 
     });
 });
 
+let op = '';
+const symbols = document.querySelectorAll('.operator')
+symbols.forEach((symbol) => {
+    symbol.addEventListener('click', (e) =>{
+        console.log(`This selected ${e.target.innerText}`)
+        arr.push(`${e.target.innerText}`)
+        op = `${e.target.innerText}`
+        return input.innerText = op;
+    });
+});
