@@ -132,3 +132,9 @@ symbols.forEach((symbol) => {
         return input.innerText = op;
     });
 });
+
+const equal = document.querySelector('.equal');
+equal.addEventListener('click', (e) => {
+    console.log(`${e.target.innerText}`)    
+    
+})
