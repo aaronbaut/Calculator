@@ -127,11 +127,19 @@ let x = 0;
 const symbols = document.querySelectorAll('.operator')
 symbols.forEach((symbol) => {
     symbol.addEventListener('click', (e) =>{
-        console.log(`${e.target.innerText}`)
-        i++;
-        arr2[x] = `${e.target.innerText}`
-        arr[i] = ''
-        return input.innerText = arr2[x];
+        if((Boolean(arr[i]) && Boolean(arr[i-1]))) {
+            i++;
+            console.log(`${e.target.innerText}`)  
+            arr[i] = '' 
+            arr[i]= operator(arr[i-2],arr[i-1],arr2[x]) 
+            return input.innerText = operator(arr[i-2],arr[i-1],arr2[x]) 
+        } else {
+             console.log(`${e.target.innerText}`)
+            i++;
+            arr2[x] = `${e.target.innerText}`
+            arr[i] = ''
+            return input.innerText = arr2[x]
+        }
     });
 });
 
