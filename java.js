@@ -108,7 +108,7 @@ input.appendChild(inputField);
 const clearButton = document.createElement('button')
 clearButton.classList.add('clear')
 clearButton.innerText = 'clear'
-input.appendChild(clearButton);
+content.appendChild(clearButton);
 
 const numbers = document.querySelectorAll('.number')
 let arr = [];
@@ -153,4 +153,15 @@ equal.addEventListener('click', (e) => {
     i++;
     console.log(`${e.target.innerText}`)   
     return input.innerText = operator(arr[i-2],arr[i-1],arr2[x])     
+})
+
+const clear = document.querySelector('.clear')
+clear.addEventListener('click', (e)=>{
+    arr.length = 0;
+    arr2.length = 0;
+    i=0;
+    x=0;
+    input.innerText = '0'
+    arr = [];
+    arr2 = [];
 })
