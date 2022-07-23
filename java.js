@@ -128,18 +128,20 @@ const symbols = document.querySelectorAll('.operator')
 symbols.forEach((symbol) => {
     symbol.addEventListener('click', (e) =>{
         if((Boolean(arr[i]) && Boolean(arr[i-1]))) {
-            i++;
             console.log(`${e.target.innerText}`)  
+            i++;
             arr[i] = '' 
             arr[i]= operator(arr[i-2],arr[i-1],arr2[x]) 
-            return input.innerText = operator(arr[i-2],arr[i-1],arr2[x]) 
+            i++;
+            arr[i] = '' 
+            return input.innerText = operator(arr[i-3],arr[i-2],arr2[x]) 
         } else {
              console.log(`${e.target.innerText}`)
             i++;
             arr2[x] = `${e.target.innerText}`
             arr[i] = ''
             return input.innerText = arr2[x]
-        }
+        } i++;
     });
 });
 
