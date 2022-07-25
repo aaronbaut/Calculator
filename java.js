@@ -122,6 +122,10 @@ clearButton.classList.add('clear')
 clearButton.innerText = 'clear'
 content.appendChild(clearButton);
 
+let nextArrayItem = function() {
+    i++;
+    arr[i] = ''
+}
 
 const numbers = document.querySelectorAll('.number')
 let arr = [];
@@ -151,6 +155,7 @@ symbols.forEach((symbol) => {
             i++;
             arr[i] = '' 
             let answer = operator(arr[i-3],arr[i-2],arr2[x-1])
+            arr[i] = answer.toFixed(3);
             return input.innerText =  answer.toFixed(3)
         } else {
              console.log(`${e.target.innerText}`)
@@ -173,6 +178,8 @@ equal.addEventListener('click', (e) => {
     console.log(`${e.target.innerText}`); 
     let answer = operator(arr[i-2],arr[i-1],arr2[x])
     arr[i] = answer.toFixed(3)
+    i++;
+    arr[i] = '';
     return input.innerText = answer.toFixed(3)
     }
     
