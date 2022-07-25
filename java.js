@@ -112,10 +112,10 @@ inputField.innerText = 'testestesttesetseestesest'
 input.appendChild(inputField);
 
 
-const decimal = document.createElement('button')
-decimal.classList.add('decimal')
-decimal.innerText = '.'
-content.appendChild(decimal)
+const decimalButton = document.createElement('button')
+decimalButton.classList.add('decimal')
+decimalButton.innerText = '.'
+content.appendChild(decimalButton)
 
 const clearButton = document.createElement('button')
 clearButton.classList.add('clear')
@@ -188,3 +188,5 @@ clear.addEventListener('click', (e)=>{
     arr[i] = '';
     arr2[x] = '';
 })
+
+const 
