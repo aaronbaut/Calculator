@@ -1,13 +1,16 @@
 #container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     padding: 40px;
     background-color: rgb(161, 161, 161);
-    display: flexbox;
     height: 300px;
     width: 200px;
 }
 
 .input {
-    display: flexbox;
+    display: flex;
+    flex-wrap: wrap;
     background-color: white;
     height: 50px;
     font-size: 24px;
@@ -24,5 +27,11 @@ button {
 }
 
 .signs {
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.lower {
+    display: flex;
 }
