@@ -189,4 +189,13 @@ clear.addEventListener('click', (e)=>{
     arr2[x] = '';
 })
 
-const 
+const decimal = document.querySelector('.decimal')
+decimal.addEventListener('click', (e) =>{
+    let answerField = input.innerText
+    if (answerField.includes('.')) {
+        return answerField
+    } else {
+        arr[i] += `${e.target.innerText}`
+        return input.innerText = arr[i]
+    }
+})
