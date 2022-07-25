@@ -156,7 +156,7 @@ const equal = document.querySelector('.equal');
 equal.addEventListener('click', (e) => {
     if(arr[i] == '') {
         return input.innerText = `0`
-    } else if(Boolean(arr[i])) {
+    } else if(arr2[x] === undefined && Boolean(arr[i])) {
         return input.innerText = `${arr[i]}`
     } else {
         i++;
