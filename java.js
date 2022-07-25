@@ -122,6 +122,11 @@ clearButton.classList.add('clear')
 clearButton.innerText = 'clear'
 content.appendChild(clearButton);
 
+const backspaceButton = document.createElement('button')
+backspaceButton.classList.add('backspace')
+backspaceButton.innerText = 'Backspace'
+content.appendChild(backspaceButton)
+
 let nextArrayItem = function() {
     i++;
     arr[i] = ''
