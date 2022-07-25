@@ -1,0 +1,11 @@
+#container {
+    padding: 40px;
+    background-color: rgb(205, 206, 207);
+    display: flexbox;
+    height: 300px;
+    width: 200px;
+}
+
+.input {
+    display: flexbox;
+}
