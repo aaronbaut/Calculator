@@ -144,13 +144,17 @@ let x = 0;
 const symbols = document.querySelectorAll('.operator')
 symbols.forEach((symbol) => {
     symbol.addEventListener('click', (e) =>{
-        if((Boolean(arr[i]) && Boolean(arr[i-1]))) {
+        if((arr[i] == '')) {
+            arr2[x] = `${e.target.innerText}`
+            return input.innerText = arr2[x]
+        }
+        else if((Boolean(arr[i]) && Boolean(arr[i-1]))) {
             console.log(`${e.target.innerText}`) 
             nextArrayItem();
             x++; 
             arr2[x] = ''
             arr2[x] = `${e.target.innerText}`
-            let answer = operator(arr[i-2],arr[i-1],arr2[x-1]) 
+            let answer = operator(arr[i-2],arr[i-1],arr2[x]) 
             arr[i] = answer.toFixed(3);
             nextArrayItem();
             return input.innerText =  answer.toFixed(3)
@@ -159,7 +163,7 @@ symbols.forEach((symbol) => {
             nextArrayItem();
             arr2[x] = `${e.target.innerText}`
             return input.innerText = arr2[x]
-        } i++;
+        }
     });
 });
 
@@ -170,7 +174,7 @@ equal.addEventListener('click', (e) => {
     } else if(arr2[x] === undefined && Boolean(arr[i])) {
         return input.innerText = `${arr[i]}`
     } else {
-        nextArrayItem();
+    nextArrayItem();
     console.log(`${e.target.innerText}`); 
     let answer = operator(arr[i-2],arr[i-1],arr2[x])
     arr[i] = answer.toFixed(3)
