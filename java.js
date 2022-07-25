@@ -8,7 +8,11 @@ const multiply = function(a,b) {
     return a*b;
 }
 const divide = function(a,b) {
-    return a/b;
+    if(arr[i] == 0) {
+        return input.innerText = 'Not possible'
+    } else {
+        return a/b;
+    }
 }
 
 let operator = function(a,b,op) {
