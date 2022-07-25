@@ -9,8 +9,6 @@ const multiply = function(a,b) {
 }
 const divide = function(a,b) {
     if(arr[i] == 0) {
-        return input.innerText = 'Not possible'
-    } else {
         return a/b;
     }
 }
@@ -23,7 +21,11 @@ let operator = function(a,b,op) {
     } else if (op==`x`){
         return multiply(a,b)
     } else if (op==`/`) {
-        return divide(a,b)
+        if(b == 0) {
+            return input.innerText = 'Can\'t divide by zero!'
+        } else {
+            return divide(a,b)
+        }
     }
 };
 const signs = document.querySelector('.signs');
