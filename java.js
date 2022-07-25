@@ -147,14 +147,13 @@ symbols.forEach((symbol) => {
         if((arr[i] == '')) {
             arr2[x] = `${e.target.innerText}`
             return input.innerText = arr2[x]
-        }
-        else if((Boolean(arr[i]) && Boolean(arr[i-1]))) {
+        } else if((Boolean(arr[i]) && Boolean(arr[i-1]))) {
             console.log(`${e.target.innerText}`) 
             nextArrayItem();
             x++; 
             arr2[x] = ''
             arr2[x] = `${e.target.innerText}`
-            let answer = operator(arr[i-2],arr[i-1],arr2[x]) 
+            let answer = operator(arr[i-2],arr[i-1],arr2[x-1]) 
             arr[i] = answer.toFixed(3);
             nextArrayItem();
             return input.innerText =  answer.toFixed(3)
