@@ -111,10 +111,17 @@ inputField.classList.add('inputField')
 inputField.innerText = 'testestesttesetseestesest'
 input.appendChild(inputField);
 
+
+const decimal = document.createElement('button')
+decimal.classList.add('decimal')
+decimal.innerText = '.'
+content.appendChild(decimal)
+
 const clearButton = document.createElement('button')
 clearButton.classList.add('clear')
 clearButton.innerText = 'clear'
 content.appendChild(clearButton);
+
 
 const numbers = document.querySelectorAll('.number')
 let arr = [];
