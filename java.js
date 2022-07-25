@@ -152,12 +152,12 @@ symbols.forEach((symbol) => {
             arr2[x] = `${e.target.innerText}`
             let answer = operator(arr[i-2],arr[i-1],arr2[x-1]) 
             arr[i] = answer.toFixed(3);
+            nextArrayItem();
             return input.innerText =  answer.toFixed(3)
         } else {
-             console.log(`${e.target.innerText}`)
-            i++;
+            console.log(`${e.target.innerText}`)
+            nextArrayItem();
             arr2[x] = `${e.target.innerText}`
-            arr[i] = ''
             return input.innerText = arr2[x]
         } i++;
     });
