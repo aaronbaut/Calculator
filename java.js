@@ -150,10 +150,17 @@ symbols.forEach((symbol) => {
 
 const equal = document.querySelector('.equal');
 equal.addEventListener('click', (e) => {
-    i++;
+    if(arr[i] == '') {
+        return input.innerText = `0`
+    } else if(Boolean(arr[i])) {
+        return input.innerText = `${arr[i]}`
+    } else {
+        i++;
     console.log(`${e.target.innerText}`)  ; 
     arr[i] = input.innerText = operator(arr[i-2],arr[i-1],arr2[x])  
     return input.innerText = operator(arr[i-2],arr[i-1],arr2[x])     
+    }
+    
 })
 
 const clear = document.querySelector('.clear')
