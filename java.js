@@ -108,7 +108,7 @@ content.appendChild(zeroButton);
 const input = document.querySelector('.input')
 const inputField = document.createElement('div')
 inputField.classList.add('inputField')
-inputField.innerText = 'testestesttesetseestesest'
+inputField.innerText = '.000'
 input.appendChild(inputField);
 
 
