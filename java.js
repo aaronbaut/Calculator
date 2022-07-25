@@ -135,8 +135,8 @@ symbols.forEach((symbol) => {
     symbol.addEventListener('click', (e) =>{
         if((Boolean(arr[i]) && Boolean(arr[i-1]))) {
             console.log(`${e.target.innerText}`) 
-            x++; 
             i++;
+            x++; 
             arr[i] = '' 
             arr2[x] = ''
             arr2[x] = `${e.target.innerText}`
@@ -163,7 +163,7 @@ equal.addEventListener('click', (e) => {
     } else {
         i++;
     console.log(`${e.target.innerText}`)  ; 
-    arr[i] = input.innerText = operator(arr[i-2],arr[i-1],arr2[x])  
+    arr[i] = input.innerText = operator(arr[i-2],arr[i-1],arr2[x])
     return input.innerText = operator(arr[i-2],arr[i-1],arr2[x])     
     }
     
