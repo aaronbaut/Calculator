@@ -146,15 +146,11 @@ symbols.forEach((symbol) => {
     symbol.addEventListener('click', (e) =>{
         if((Boolean(arr[i]) && Boolean(arr[i-1]))) {
             console.log(`${e.target.innerText}`) 
-            i++;
+            nextArrayItem();
             x++; 
-            arr[i] = '' 
             arr2[x] = ''
             arr2[x] = `${e.target.innerText}`
-            arr[i]= operator(arr[i-2],arr[i-1],arr2[x-1]) 
-            i++;
-            arr[i] = '' 
-            let answer = operator(arr[i-3],arr[i-2],arr2[x-1])
+            let answer = operator(arr[i-2],arr[i-1],arr2[x-1]) 
             arr[i] = answer.toFixed(3);
             return input.innerText =  answer.toFixed(3)
         } else {
@@ -174,12 +170,11 @@ equal.addEventListener('click', (e) => {
     } else if(arr2[x] === undefined && Boolean(arr[i])) {
         return input.innerText = `${arr[i]}`
     } else {
-        i++;
+        nextArrayItem();
     console.log(`${e.target.innerText}`); 
     let answer = operator(arr[i-2],arr[i-1],arr2[x])
     arr[i] = answer.toFixed(3)
-    i++;
-    arr[i] = '';
+    nextArrayItem();
     return input.innerText = answer.toFixed(3)
     }
     
