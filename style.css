@@ -36,3 +36,7 @@ button {
 .lower {
     display: flex;
 }
+
+.backspace {
+    width: 100px;
+}
