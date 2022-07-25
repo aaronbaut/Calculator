@@ -143,7 +143,8 @@ symbols.forEach((symbol) => {
             arr[i]= operator(arr[i-2],arr[i-1],arr2[x-1]) 
             i++;
             arr[i] = '' 
-            return input.innerText = operator(arr[i-3],arr[i-2],arr2[x-1]) 
+            let answer = operator(arr[i-3],arr[i-2],arr2[x-1])
+            return input.innerText =  answer.toFixed(3)
         } else {
              console.log(`${e.target.innerText}`)
             i++;
@@ -162,9 +163,10 @@ equal.addEventListener('click', (e) => {
         return input.innerText = `${arr[i]}`
     } else {
         i++;
-    console.log(`${e.target.innerText}`)  ; 
-    arr[i] = input.innerText = operator(arr[i-2],arr[i-1],arr2[x])
-    return input.innerText = operator(arr[i-2],arr[i-1],arr2[x])     
+    console.log(`${e.target.innerText}`); 
+    let answer = operator(arr[i-2],arr[i-1],arr2[x])
+    arr[i] = answer.toFixed(3)
+    return input.innerText = answer.toFixed(3)
     }
     
 })
