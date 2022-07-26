@@ -132,11 +132,11 @@ let nextArrayItem = function() {
     arr[i] = ''
 }
 
-
 const numbers = document.querySelectorAll('.number')
 let arr = [];
 let i = 0;
 arr[0] = '';
+
 numbers.forEach((number) =>{
     number.addEventListener('click', function(e) {
         console.log(e.target.textContent)
@@ -160,9 +160,9 @@ symbols.forEach((symbol) => {
             arr2[x] = ''
             arr2[x] = `${e.target.textContent}`
             let answer = operator(arr[i-2],arr[i-1],arr2[x-1]) 
-            arr[i] = answer.toFixed(3);
+            arr[i] = answer.toFixed(2);
             nextArrayItem();
-            return input.textContent =  answer.toFixed(3)
+            return input.textContent =  answer.toFixed(2)
         } else {
             console.log(`${e.target.textContent}`)
             nextArrayItem();
@@ -182,11 +182,10 @@ equal.addEventListener('click', (e) => {
     nextArrayItem();
     console.log(`${e.target.textContent}`); 
     let answer = operator(arr[i-2],arr[i-1],arr2[x])
-    arr[i] = answer.toFixed(3)
+    arr[i] = answer.toFixed(2)
     nextArrayItem();
-    return input.textContent = answer.toFixed(3)
+    return input.textContent = answer.toFixed(2)
     }
-
 })
 
 const clear = document.querySelector('.clear')
@@ -216,3 +215,14 @@ backspace.addEventListener('click', (e) => {
     arr[i] = ''
     return input.textContent = arr[i];
 })
+
+window.addEventListener('keydown', handleKeyPress)
+
+function handleKeyPress (e) {
+  e.preventDefault();
+    if(e.key >= 0 && e.key <= 9) {
+        console.log(`${e.key}`)
+         arr[i] += `${e.key}`
+        return input.textContent = arr[i]; 
+    }
+}
