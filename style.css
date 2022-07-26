@@ -2,10 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    background-color: pink;
     padding: 40px;
-    background-color: rgb(161, 161, 161);
     height: 300px;
     width: 200px;
+
 }
 
 .input {
@@ -15,8 +16,6 @@
     height: 50px;
     font-size: 24px;
     justify-content: end;
-    
-
 }
 
 button {
@@ -24,7 +23,8 @@ button {
     height: 50px;
     background-color: purple;
     color: white;
-
+    border-style: solid;
+    
 }
 
 .signs {
@@ -40,3 +40,4 @@ button {
 .backspace {
     width: 100px;
 }
+
