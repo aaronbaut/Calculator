@@ -139,7 +139,7 @@ arr[0] = '';
 
 numbers.forEach((number) =>{
     number.addEventListener('click', function(e) {
-        console.log(e.target.textContent)
+        console.log(e.target)
          arr[i] += `${e.target.textContent}`
         return input.textContent = arr[i]; 
     });
@@ -219,10 +219,45 @@ backspace.addEventListener('click', (e) => {
 window.addEventListener('keydown', handleKeyPress)
 
 function handleKeyPress (e) {
-  e.preventDefault();
-    if(e.key >= 0 && e.key <= 9) {
+    e.preventDefault();
+    if (e.key >= 0 && e.key <= 9) {
         console.log(`${e.key}`)
          arr[i] += `${e.key}`
         return input.textContent = arr[i]; 
+    }
+    if (e.key ==='+' || e.key ==='-' || e.key ==='/' || e.key ==='*') {
+        if((arr[i] == '')) {
+            arr2[x] = `${e.key}`
+            return input.textContent = arr2[x]
+        } else if((Boolean(arr[i]) && Boolean(arr[i-1]))) {
+            console.log(`${e.key}`) 
+            nextArrayItem();
+            x++; 
+            arr2[x] = ''
+            arr2[x] = `${e.key}`
+            let answer = operator(arr[i-2],arr[i-1],arr2[x-1]) 
+            arr[i] = answer.toFixed(2);
+            nextArrayItem();
+            return input.textContent =  answer.toFixed(2)
+        } else {
+            console.log(`${e.key}`)
+            nextArrayItem();
+            arr2[x] = `${e.key}`
+            return input.textContent = arr2[x]
+        }
+    }
+    if (e.key ==='Enter') {
+        if(arr[i] == '') {
+            return input.textContent = `0`
+        } else if(arr2[x] === undefined && Boolean(arr[i])) {
+            return input.textContent = `${arr[i]}`
+        } else {
+        nextArrayItem();
+        console.log(`${e.key}`); 
+        let answer = operator(arr[i-2],arr[i-1],arr2[x])
+        arr[i] = answer.toFixed(2)
+        nextArrayItem();
+        return input.textContent = answer.toFixed(2)
+        }
     }
 }
